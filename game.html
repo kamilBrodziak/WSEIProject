@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Kamil Brodziak Projekt - Gra</title>
+    <meta name="description" content="Strona stworzona jako zadanie na ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ticTacToe.css">
+</head>
+<body>
+<div id="siteContainer">
+    <header id="siteHeader" class="darkGradientBg">
+        <a href="index.html" id="siteHeaderAnchor" class="flexCentered">
+            <h1 class="textCenter colorSilver">Projekt - Kamil Brodziak</h1>
+        </a>
+    </header>
+    <main id="siteContent">
+        <nav id="siteNav">
+            <div id="siteNavMobileButton">
+                <div class="siteNavMobileButtonPart"></div>
+                <div class="siteNavMobileButtonPart"></div>
+                <div class="siteNavMobileButtonPart"></div>
+            </div>
+            <ul id="siteNavList">
+                <li class="siteNavListItem">
+                    <a href="index.html" class="flexCentered">Strona główna</a>
+                </li>
+                <li class="siteNavListItem">
+                    <a href="toDos.html" class="flexCentered">ToDo</a>
+                </li>
+                <li class="siteNavListItem">
+                    <a href="notes.html" class="flexCentered">Notatki</a>
+                </li>
+                <li class="siteNavListItem">
+                    <a href="video.html" class="flexCentered">Video</a>
+                </li>
+                <li class="siteNavListItem currentSite">
+                    <a href="game.html" class="flexCentered">Gra</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="gameContent">
+            <form id="gameStartForm">
+                <div class="gameChoiceContainer">
+                    <span>Poziom trudności</span>
+                    <label>
+                        <span>Łatwy</span>
+                        <input type="radio" name="gameDifficulty" value="easy"
+                               id="gameDifficultyEasy" class="gameDifficulty" checked>
+                    </label>
+                    <label>
+                        <span>Średni</span>
+                        <input type="radio" name="gameDifficulty" value="normal"
+                               id="gameDifficultyNormal" class="gameDifficulty">
+                    </label>
+                    <label>
+                        <span>Trudny</span>
+                        <input type="radio" name="gameDifficulty" value="hard"
+                               id="gameDifficultyHard" class="gameDifficulty">
+                    </label>
+                </div>
+                <div class="gameChoiceContainer">
+                    <span>Chcesz grać X czy O?</span>
+                    <label>
+                        <span>X</span>
+                        <input type="radio" name="gameChar" value="X"
+                               id="gameCharX" class="gameChar" checked>
+                    </label>
+                    <label>
+                        <span>O</span>
+                        <input type="radio" name="gameChar" value="O"
+                               id="gameCharO" class="gameChar">
+                    </label>
+                </div>
+                <input type="submit" id="gameStartButton" value="Zacznij">
+            </form>
+
+            <div id="gameContainer">
+
+            </div>
+        </div>
+    </main>
+    <footer id="siteFooter" class="flexCentered">
+        <span>Strona stworzona przez Kamil Brodziak lab 12</span>
+    </footer>
+</div>
+<script src="js/TicTacToeController.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

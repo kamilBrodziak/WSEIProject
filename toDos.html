@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Kamil Brodziak Projekt - ToDo</title>
+    <meta name="description" content="Strona stworzona jako zadanie na ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toDo.css">
+
+</head>
+<body>
+<div id="siteContainer">
+    <header id="siteHeader" class="darkGradientBg">
+        <a href="index.html" id="siteHeaderAnchor" class="flexCentered">
+            <h1 class="textCenter colorSilver">Projekt - Kamil Brodziak</h1>
+        </a>
+    </header>
+    <main id="siteContent">
+        <nav id="siteNav">
+            <div id="siteNavMobileButton">
+                <div class="siteNavMobileButtonPart"></div>
+                <div class="siteNavMobileButtonPart"></div>
+                <div class="siteNavMobileButtonPart"></div>
+            </div>
+            <ul id="siteNavList">
+                <li class="siteNavListItem">
+                    <a href="index.html" class="flexCentered">Strona główna</a>
+                </li>
+                <li class="siteNavListItem currentSite">
+                    <a href="toDos.html" class="flexCentered">ToDo</a>
+                </li>
+                <li class="siteNavListItem">
+                    <a href="notes.html" class="flexCentered">Notatki</a>
+                </li>
+                <li class="siteNavListItem">
+                    <a href="video.html" class="flexCentered">Video</a>
+                </li>
+                <li class="siteNavListItem">
+                    <a href="game.html" class="flexCentered">Gra</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="toDoContent">
+            <div id="toDos">
+
+            </div>
+            <nav id="toDosNav">
+                <ul id="toDosNavList">
+                    <li id="toDosSave" class="toDosNavListItem">Zapisz</li>
+                    <li id="toDosAdd" class="toDosNavListItem">Dodaj nowe ToDo</li>
+                    <li id="toDosMinimize" class="toDosNavListItem">Minimalizuj wszystkie ToDo</li>
+                    <li id="toDosClear" class="toDosNavListItem">Usuń wszystkie ToDo</li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <footer id="siteFooter" class="flexCentered">
+        <span>Strona stworzona przez Kamil Brodziak lab 12</span>
+    </footer>
+</div>
+<script src="js/ToDoItem.js" defer></script>
+<script src="js/ToDo.js" defer></script>
+<script src="js/ToDoController.js" defer></script>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

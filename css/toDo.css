@@ -1,0 +1,331 @@
+/*
+    ===================================
+        ToDos Container
+    ===================================
+*/
+
+#toDoContent {
+    position: relative;
+    color: silver;
+}
+
+#toDos {
+    min-height: 100vh;
+}
+
+/*
+    ===================================
+        ToDos Nav
+    ===================================
+*/
+
+#toDosNav {
+    position: sticky;
+    z-index: 99;
+    bottom: 5px;
+    left: 0;
+}
+
+#toDosNavList {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.toDosNavListItem {
+    background: #262626;
+    border: 4px groove silver;
+    color: silver;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/*
+    ===================================
+        ToDo
+    ===================================
+*/
+
+.toDo {
+    width: 90%;
+    min-width: 250px;
+    background: #262626;
+    margin: 10px auto;
+}
+
+@media screen and (min-width: 996px) {
+    .toDo {
+        width: 80%;
+    }
+}
+
+/*
+    ===================================
+        ToDo Header
+    ===================================
+*/
+
+.toDoHeader {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.toDoTitle {
+    flex: 1;
+    padding: 5px;
+}
+
+.toDoTitleInput {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid silver;
+    color: silver;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.toDoNavList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.toDoNavListItem {
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.toDoNavListItem button {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #8e8e8e, silver, #8e8e8e);
+    border: 5px solid silver;
+    border-width: 0 2px 5px 0;
+}
+
+.toDoNavListItem button:after, .toDoNavListItem button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    border: 2px groove silver;
+    border-radius: 10px;
+    content: '';
+    background: #262626;
+}
+
+.toDoNavListItem .toDoDelete:after, .toDoNavListItem .toDoDelete:before {
+    height: 100%;
+    top: 50%;
+    left: 50%;
+}
+
+.toDoNavListItem .toDoDelete:after {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.toDoNavListItem .toDoDelete:before {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+
+.toDoNavListItem .toDoMinimize:after, .toDoNavListItem .toDoMinimize:before {
+    height: 60%;
+    top: 50%;
+}
+
+.toDoNavListItem .toDoMinimize:after {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+    left: 39%;
+}
+
+.toDoNavListItem .toDoMinimize:before {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    left: 69%;
+}
+
+.toDo.active .toDoNavListItem .toDoMinimize:after {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.toDo.active .toDoNavListItem .toDoMinimize:before {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+
+
+/*
+    ===================================
+        ToDoItems
+    ===================================
+*/
+
+.toDoItems {
+    height: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.toDo.active .toDoItems {
+    height: auto;
+}
+
+.toDoItemsList {
+    list-style: none;
+    width: 100%;
+    height: auto;
+}
+
+.toDoItem {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    justify-content: space-between;
+    border-bottom: 3px solid silver;
+    background: linear-gradient(to bottom, #939393, #6d6d6d, #939393);
+}
+
+.toDoItem.done {
+    background: linear-gradient(to bottom, #4e4e4e, #3b3b3b, #4e4e4e);
+    border-bottom: 3px solid #3b3b3b;
+}
+
+.toDoItem.done .toDoText {
+    text-decoration: line-through;
+    font-weight: normal;
+    color: silver;
+}
+
+.toDoItem.done .toDoEdit {
+    display: none;
+}
+
+.toDoText {
+    /*width: calc(100% - 140px);*/
+    flex: 1;
+    height: 30px;
+    box-sizing: content-box;
+    resize: none;
+    font-size: 2rem;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.toDoText::placeholder {
+    color: #4e4e4e;
+}
+
+.toDoText:disabled {
+    background: none;
+    border: none;
+    color: black;
+    cursor: default;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.toDoText:disabled::selection {
+    background: none;
+}
+
+.toDoEdit {
+    width: 50px;
+    height: 50px;
+    transition: all 0.1s ease;
+    margin: 0 0 0 5px;
+    background: linear-gradient(to bottom, #2a2a2a, #3b3b3b, #2a2a2a);
+    border: 5px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+    border-width: 0 2px 4px 0;
+}
+
+.toDoEdit:disabled {
+    display: none;
+}
+
+.toDoRemove {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 5px;
+    background: linear-gradient(to bottom, #2a2a2a, #3b3b3b, #2a2a2a);
+    border: 5px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+    border-width: 0 2px 4px 0;
+}
+
+
+/*
+    ===================================
+        ToDo Footer Nav
+    ===================================
+*/
+
+.toDoFooter {
+    height: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.toDo.active .toDoFooter {
+    height: auto;
+}
+
+.toDoItemsNav {
+    padding: 10px;
+}
+
+.toDoItemsNavList {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.toDoItemsNavListItem {
+    height: 50px;
+    cursor: pointer;
+}
+
+.toDoItemsNavListItem {
+    width: 49%;
+}
+
+.toDoItemsNavListItem button {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #8e8e8e, silver, #8e8e8e);
+    border: 5px solid silver;
+    border-width: 0 2px 5px 0;
+}
+
+/*
+    ===================================
+        ToDo Nav
+    ===================================
+*/

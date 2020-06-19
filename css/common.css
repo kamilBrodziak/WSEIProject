@@ -1,0 +1,17 @@
+.flexCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.darkGradientBg {
+    background: linear-gradient(to bottom, #262626, #171717, #262626);
+}
+
+.colorSilver {
+    color: silver;
+}

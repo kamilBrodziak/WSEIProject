@@ -1,0 +1,106 @@
+/*
+    ===================================
+        TicTacToe Start Form
+    ===================================
+*/
+
+.hide {
+    display: none;
+}
+
+#gameStartForm {
+    width: 300px;
+    height: auto;
+    margin: 80px auto;
+}
+
+.gameChoiceContainer {
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.gameChoiceContainer > span{
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.gameChoiceContainer label {
+    width: 30%;
+    text-align: center;
+}
+
+
+.gameChoiceContainer label input{
+    width: 50px;
+    height: 50px;
+}
+
+.gameChoiceContainer label span{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#gameStartButton {
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+}
+
+/*
+    ===================================
+        TicTacToe Table
+    ===================================
+*/
+
+#gameContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.gameTable {
+    width: 300px;
+    height: 300px;
+    border-collapse: collapse;
+    margin: 100px 0;
+
+}
+
+.gameTableRow {
+    width: 100%;
+    height: 100px;
+}
+
+.gameTableCell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 70px;
+    cursor: default;
+}
+
+.gameTableCell.empty {
+    cursor: pointer;
+}
+
+
+#gameResult {
+    width: 300px;
+    margin: 20px 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#gamePlayAgainButton {
+    width: 300px;
+    height: 80px;
+    margin: 40px 0;
+    font-size: 3rem;
+}
