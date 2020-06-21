@@ -1,6 +1,7 @@
 #siteContainer {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 #siteContent {
@@ -65,7 +66,7 @@ body.mobileNavActive {
 
 .siteNavListItem {
     width: 100%;
-    height: 20%;
+    height: 25%;
     position: relative;
     cursor: pointer;
     background: linear-gradient(to right, transparent, silver, transparent) no-repeat bottom / 60% 2px,
@@ -96,6 +97,10 @@ body.mobileNavActive {
     font-size: 2rem;
 }
 
+.siteNavListItem a span{
+    margin: 0 auto;
+}
+
 .siteNavListItem.currentSite a {
     font-weight: bold;
 }
@@ -104,14 +109,24 @@ body.mobileNavActive {
     opacity: 1;
 }
 
+.navIcon {
+    height: 70%;
+    width: auto;
+    margin: 15% 10px 15% 0;
+}
+
 @media screen and (min-width: 996px) {
     #siteNavList {
         display: flex;
         flex-direction: row;
     }
 
+    .siteNavListItem a span{
+        margin: 0;
+    }
+
     .siteNavListItem {
-        width: 20%;
+        width: 25%;
         height: 50px;
         background: linear-gradient(to bottom, transparent, silver, transparent) no-repeat left / 2px 60%,
             linear-gradient(to bottom, transparent, silver, transparent) no-repeat right / 2px 60%;
@@ -170,7 +185,9 @@ body.mobileNavActive {
 
 #siteContent {
     height: auto;
-    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 

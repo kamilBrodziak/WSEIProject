@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/video.css">
 </head>
 <body>
 <div id="siteContainer">
@@ -25,24 +26,36 @@
             </div>
             <ul id="siteNavList">
                 <li class="siteNavListItem">
-                    <a href="index.html" class="flexCentered">Strona główna</a>
+                    <a href="index.html" class="flexCentered">
+                        <img class="navIcon" src="img/home.svg" alt="Strona główna">
+                        <span>Strona główna</span>
+                    </a>
                 </li>
                 <li class="siteNavListItem">
-                    <a href="toDos.html" class="flexCentered">ToDo</a>
-                </li>
-                <li class="siteNavListItem">
-                    <a href="notes.html" class="flexCentered">Notatki</a>
+                    <a href="toDos.html" class="flexCentered">
+                        <img class="navIcon" src="img/toDo.svg" alt="toDo">
+                        <span>ToDo</span>
+                    </a>
                 </li>
                 <li class="siteNavListItem currentSite">
-                    <a href="video.html" class="flexCentered">Video</a>
+                    <a href="video.html" class="flexCentered">
+                        <img class="navIcon" src="img/video.svg" alt="Video">
+                        <span>Video</span>
+                    </a>
                 </li>
                 <li class="siteNavListItem">
-                    <a href="game.html" class="flexCentered">Gra</a>
+                    <a href="game.html" class="flexCentered">
+                        <img class="navIcon" src="img/tic-tac-toe.svg" alt="Gra">
+                        <span>Gra</span>
+                    </a>
                 </li>
             </ul>
         </nav>
-        <div id="indexContent">
-
+        <div id="videoContent">
+            <video id="video" controls>
+                <source src="img/nature.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </main>
     <footer id="siteFooter" class="flexCentered">

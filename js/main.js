@@ -39,6 +39,11 @@ function createElement(params, childs = []) {
             element.setAttribute('data-' + dataName, dataValue);
         }
     }
+
+    if(params.type === "img") {
+        element.src = params.src;
+    }
+
     if(params.type === 'textarea') {
         if(params.placeholder) {
             element.setAttribute('placeholder', params.placeholder);

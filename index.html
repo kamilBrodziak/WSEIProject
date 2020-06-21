@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div id="siteContainer">
@@ -25,24 +26,56 @@
                 </div>
                 <ul id="siteNavList">
                     <li class="siteNavListItem currentSite">
-                        <a href="index.html" class="flexCentered">Strona główna</a>
+                        <a href="index.html" class="flexCentered">
+                            <img class="navIcon" src="img/home.svg" alt="Strona główna">
+                            <span>Strona główna</span>
+                        </a>
                     </li>
                     <li class="siteNavListItem">
-                        <a href="toDos.html" class="flexCentered">ToDo</a>
+                        <a href="toDos.html" class="flexCentered">
+                            <img class="navIcon" src="img/toDo.svg" alt="toDo">
+                            <span>ToDo</span>
+                        </a>
                     </li>
                     <li class="siteNavListItem">
-                        <a href="notes.html" class="flexCentered">Notatki</a>
+                        <a href="video.html" class="flexCentered">
+                            <img class="navIcon" src="img/video.svg" alt="Video">
+                            <span>Video</span>
+                        </a>
                     </li>
                     <li class="siteNavListItem">
-                        <a href="video.html" class="flexCentered">Video</a>
-                    </li>
-                    <li class="siteNavListItem">
-                        <a href="game.html" class="flexCentered">Gra</a>
+                        <a href="game.html" class="flexCentered">
+                            <img class="navIcon" src="img/tic-tac-toe.svg" alt="Gra">
+                            <span>Gra</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
             <div id="indexContent">
+                <div id="projectDetails">
+                    <h2>Projekt na zajęcia: Wprowadzenie do technologii webowych</h2>
+                    <h3>Autor: <span class="fontBold">Kamil Brodziak</span></h3>
+                    <h3>Lab: <span class="fontBold">lab12</span></h3>
+                    <h3>Indeks: <span class="fontBold">11534</span></h3>
+                </div>
 
+                <h2>Opis podstron:</h2>
+                <ul id="pagesDetails">
+                    <li class="pageDetails"><a href="toDos.html" class="linkBlack">ToDo</a> - strona, na której można
+                        dodać, usuwać, minimalizować listy toDo,
+                        a następnie w każdej liście toDo dodać, modyfikować, usuwać zadania bądź za pomocą podwójnego
+                        kliknięcia lewym klawiszem myszy zaznaczyć zadanie za zrobione. Listy toDo dodatkowo można zapisać
+                        do magazynu localStorage.</li>
+                    <li class="pageDetails"><a href="video.html" class="linkBlack">Video</a> - strona, na której zamieszczony jest
+                    przykładowy film.</li>
+                    <li class="pageDetails"><a href="game.html" class="linkBlack">Gra</a> - strona, na której zamieszczona jest
+                        gra kółko i krzyżyk. Aby rozpocząć grę należy wybrać poziom trudności oraz czym chce się grać,
+                        kółkiem bądź krzyżykiem. Poziom łatwy - komputer losowo wybiera pola w których stawia swój znak.
+                        Poziom średni - komputer dodatkowo sprawdza czy gdzieś istnieje kombinacja dająca zwycięstwo jemu,
+                        bądź graczowi i następnie stawia tam swój znak. Poziom trudny - komputer dodatkowo sprawdza, czy
+                        istnieje kombinacja, w której jest jego jeden znak oraz 2 inne znaki są puste, następnie stawia
+                        tam swój znak.</li>
+                </ul>
             </div>
         </main>
         <footer id="siteFooter" class="flexCentered">

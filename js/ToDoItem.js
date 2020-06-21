@@ -14,7 +14,8 @@ class ToDoItem {
     createNode() {
         const _this = this;
         const toDoText = createElement({type: 'textarea', classes: "toDoText", value:_this.text, textareaRows: 1, placeholder: 'Treść zadania...'});
-        const toDoEdit = createElement({type: 'button', classes: "toDoEdit", value: "Edytuj"});
+        const toDoEditIcon = createElement({type: 'img', src: "img/edit.svg" , classes: 'icon'});
+        const toDoEdit = createElement({type: 'button', classes: "toDoEdit", value: "Edytuj"}, [toDoEditIcon]);
         const toDoRemove = createElement({type: 'button', classes: "toDoRemove", value: 'Usuń'});
         let toDoClasses = "toDoItem";
         let isBeingCreated = true;

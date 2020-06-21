@@ -7,10 +7,13 @@
 #toDoContent {
     position: relative;
     color: silver;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 #toDos {
-    min-height: 100vh;
+    flex: 1;
 }
 
 /*
@@ -42,6 +45,67 @@
     height: 50px;
     margin: 0 5px;
     cursor: pointer;
+    position: relative;
+}
+
+#toDosAdd:before, #toDosClear:before, #toDosMinimize:before,
+#toDosAdd:after, #toDosClear:after, #toDosMinimize:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    border-radius: 10px;
+    content: '';
+    background: silver;
+}
+
+#toDosClear:after, #toDosClear:before {
+    height: 80%;
+    top: 50%;
+    left: 50%;
+}
+
+#toDosClear:after {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+#toDosClear:before {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+
+#toDosMinimize:after, #toDosMinimize:before {
+    height: 50%;
+    top: 50%;
+}
+
+#toDosMinimize:after {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    left: 36%;
+}
+
+#toDosMinimize:before {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+    left: 65%;
+}
+
+#toDosAdd:after, #toDosAdd:before {
+    height: 80%;
+    top: 50%;
+    left: 50%;
+}
+
+#toDosAdd:after {
+    transform: translate(-50%, -50%);
+}
+
+#toDosAdd:before {
+    transform: translate(-50%, -50%) rotateZ(90deg);
+}
+
+#toDosSave .icon{
+    height: 60%;
+    width: 60%;
+    margin: 20%;
 }
 
 /*
@@ -102,7 +166,6 @@
 .toDoNavListItem {
     height: 50px;
     width: 50px;
-    background: yellow;
     margin-left: 5px;
     cursor: pointer;
 }
@@ -275,6 +338,31 @@
     border-radius: 5px;
     cursor: pointer;
     border-width: 0 2px 4px 0;
+    position: relative;
+}
+
+.toDoRemove:after, .toDoRemove:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    border-radius: 10px;
+    content: '';
+    background: white;
+}
+
+.toDoRemove:after, .toDoRemove:before {
+    height: 80%;
+    top: 50%;
+    left: 50%;
+}
+
+.toDoRemove:after {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.toDoRemove:before {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
 }
 
 
@@ -306,26 +394,20 @@
 }
 
 .toDoItemsNavListItem {
-    height: 50px;
     cursor: pointer;
-}
-
-.toDoItemsNavListItem {
     width: 49%;
 }
 
 .toDoItemsNavListItem button {
     width: 100%;
-    height: 100%;
-    font-size: 2rem;
+    position: relative;
     cursor: pointer;
     background: linear-gradient(to bottom, #8e8e8e, silver, #8e8e8e);
     border: 5px solid silver;
     border-width: 0 2px 5px 0;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    height: auto;
 }
-
-/*
-    ===================================
-        ToDo Nav
-    ===================================
-*/
