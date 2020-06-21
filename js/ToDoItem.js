@@ -14,7 +14,7 @@ class ToDoItem {
     createNode() {
         const _this = this;
         const toDoText = createElement({type: 'textarea', classes: "toDoText", value:_this.text, textareaRows: 1, placeholder: 'Treść zadania...'});
-        const toDoEditIcon = createElement({type: 'img', src: "img/edit.svg" , classes: 'icon'});
+        const toDoEditIcon = createElement({type: 'img', src: "img/icons/edit.svg" , classes: 'icon'});
         const toDoEdit = createElement({type: 'button', classes: "toDoEdit", value: "Edytuj"}, [toDoEditIcon]);
         const toDoRemove = createElement({type: 'button', classes: "toDoRemove", value: 'Usuń'});
         let toDoClasses = "toDoItem";
@@ -23,7 +23,9 @@ class ToDoItem {
             toDoClasses += " done";
         }
         document.getElementsByTagName('body')[0].addEventListener('click', function (e) {
-            if(e.target !== toDoText && e.target !== toDoEdit && _this.isTyping && !isBeingCreated) {
+            if(e.target !== toDoText && e.target !== toDoEdit
+                && e.target !== toDoEditIcon
+                && _this.isTyping && !isBeingCreated) {
                 toDoText.setAttribute("disabled", "disabled");
                 toDoEdit.removeAttribute('disabled');
                 _this.isTyping = false;

@@ -14,7 +14,13 @@ body {
 }
 
 html {
-    font-size: 10px;
+    font-size: 8px;
+}
+
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 10px;
+    }
 }
 
 a {
